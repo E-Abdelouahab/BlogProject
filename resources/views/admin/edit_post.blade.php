@@ -36,26 +36,47 @@
       <!-- Sidebar Navigation end-->
 
       <div class="page-content">
-        <form action="">
 
+        @if(session()->has('message'))
+
+        <div class="alert alert-success" role="alert">
+
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+ 
+          {{session()->get('message')}}
+
+        </div>
+
+        @endif
+
+      <h1 class="post_title">Update Post </h1>
+        <form action="{{url('update_post', $post->id)}}" method="POST" enctype="multipart/form-data">
+           @csrf
           <div class="div_center">
-            <label for="">Post Title</label>
-            <input type="text" name="title" id="">
+
+            <label >Post Title</label>
+            <input type="text" name="title"  value="{{$post->title}}">
         </div>
 
         <div class="div_center">
             <label for="">Post Description</label>
-            <textarea name="description" id="" cols="30" rows="10"></textarea>
+            <textarea name="description" id="" cols="30" rows="10">{{$post->description}}</textarea>
+        </div>
+
+        <div class="div_center">
+         <label for="">Old Image</label>
+         <img style="margin: auto" height="10Opx" width="150px" src="/postimage/{{$post->image}}">
+
         </div>
 
         <div class="div_center"> 
-            <label for="">Post Image</label>
+            <label for="">Update Image</label>
             <input type="file" name="image" id="">
         </div>
 
         <div class="div_center">
         
-            <input type="submit" class="btn btn-primary">
+            <input type="submit" value="Update" class="btn btn-primary">
         </div>
 
 
