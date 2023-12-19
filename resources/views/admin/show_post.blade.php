@@ -73,6 +73,8 @@
                 <th>Image</th>
 
                 <th>Delete</th>
+
+                <th>Edit</th>
             </tr>
      @foreach($post as $post)
          
@@ -87,6 +89,9 @@
                 </td>
                 <td>
                     <a href="{{url('delete_post',$post->id)}}" type="button" class="btn btn-danger" onclick="confirmation(event)">Delete</a>
+                </td>
+                <td>
+                    <a href="{{url('edit_post' ,$post->id)}}" type="button" class="btn btn-success">Edit</a>
                 </td>
                 
             </tr>	

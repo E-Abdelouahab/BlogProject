@@ -70,4 +70,12 @@ class AdminController extends Controller
 
      return redirect()->back()->with('message', 'Post Deleted succesfully');
    }
+
+   public function edit_post($id)
+   {
+
+    $post = Post::find($id);
+
+    return view('admin.edit_post',compact('post'));
+   }
 }

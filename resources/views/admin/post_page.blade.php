@@ -73,7 +73,7 @@
 
                 <div class="div_center">
                 
-                    <input type="submit" class="btn-btn-primary">
+                    <input type="submit" class="btn btn-primary">
                 </div>
 
             </form>
