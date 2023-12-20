@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use Alert;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -83,6 +84,7 @@ class HomeController extends Controller
        }
 
        $post->save();
+       Alert::success('Congrats','You have Added the data Successfully');
        return redirect()->back();
 
 
