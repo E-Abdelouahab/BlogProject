@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Post;
 
 use App\Models\User;
-use Alert;
+use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
-use App\Models\Post;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
 {
@@ -88,5 +88,10 @@ class HomeController extends Controller
        return redirect()->back();
 
 
+    }
+
+    public function my_post()
+    {
+        return view('home.my_post');
     }
 }
