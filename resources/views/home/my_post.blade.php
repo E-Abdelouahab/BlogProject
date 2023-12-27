@@ -19,7 +19,8 @@
          .post_deg
          {
           padding: 30px;
-          text-align: center;   
+          text-align: center;
+          background-color: black;
          }
 
          .title_deg
@@ -37,6 +38,13 @@
             padding: 15px;
             color: whitesmoke;
          }
+         .img_deg
+         {
+            height: 200px;
+            width: 300px;
+            padding: 30px;
+           margin: auto;
+         }
       </style>
    </head>
    <body>
@@ -47,7 +55,7 @@
       @foreach ($data as $data)
           
          <div class="post_deg">
-            <img src="">
+            <img class="img_deg" src="/postimage/{{$data->image}}">
             <h4 class="title_deg">{{$data->title}}</h4>
             <p class="des_deg">{{$data->description}}</p>
          </div>
