@@ -92,6 +92,9 @@ class HomeController extends Controller
 
     public function my_post()
     {
-        return view('home.my_post');
+        $user=Auth::user();
+        $userid=$user->id;
+        $data=Post::where('user_id', '=' ,$userid)->get();
+        return view('home.my_post',compact('data'));
     }
 }
