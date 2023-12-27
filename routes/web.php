@@ -60,3 +60,6 @@ middleware('auth');
 Route::get('/my_post', [HomeController::class, 'my_post'])->
 middleware('auth');
 
+Route::get('/my_post_del/{id}', [HomeController::class, 'my_post_del'])->
+middleware('auth');
+
