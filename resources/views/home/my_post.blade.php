@@ -70,7 +70,7 @@
             <h4 class="title_deg">{{$data->title}}</h4>
             <p class="des_deg">{{$data->description}}</p>
 
-            <a onclick="retrun confirm('are you sure to delete this ?')" href="{{url('my_post_del' ,$data->id)}}" class="btn btn-danger">Delete</a>
+            <a  onclick="retrun confirm('are you sure to delete this ?')" href="{{url('my_post_del' ,$data->id)}}" class="btn btn-danger">Delete</a>
          </div>
          @endforeach
       </div>
